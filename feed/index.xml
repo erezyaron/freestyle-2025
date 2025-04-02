@@ -9,10 +9,10 @@
 
 <channel>
 	<title>Freestyle Dojo</title>
-	<atom:link href="{{ site.url }}/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="https://erezyaron.github.io/freestyle-2025/feed/" rel="self" type="application/rss+xml" />
 	<link>https://erezyaron.github.io/freestyle-2025/</link>
 	<description>Professional Jiu Jitsu gym with expert trainers</description>
-	<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+	<lastBuildDate>Wed, 02 Apr 2025 16:57:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
