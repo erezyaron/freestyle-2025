@@ -1,0 +1,7 @@
+title: Freestyle Dojo 2025 Site
+description: Professional Jiu Jitsu gym with expert trainers
+baseurl: "freestyle-2025" # Keep empty unless your site is in a subdirectory
+url: "https://erezyaron.github.io/" # Change to your GitHub Pages URL
+theme: minima # (Optional) Uses Jekyll's default theme
+plugins:
+  - jekyll-feed
