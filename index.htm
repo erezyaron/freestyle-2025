@@ -751,6 +751,10 @@
     .has-barlow-font-family {
       font-family: var(--wp--preset--font-family--barlow) !important;
     }
+    .hidden-content {
+      display: none;
+      margin-top: 10px;
+    }
   </style>
   <style id='wp-block-template-skip-link-inline-css'>
     .skip-link.screen-reader-text {
@@ -1434,14 +1438,19 @@
                     are!</span></p>
               </div>
             </div>
-
+<script>
+  function toggleContent(id) {
+    const content = document.getElementById(id);
+    content.style.display = content.style.display === "none" ? "block" : "none";
+  }
+</script>
             <div class="row instructors-container"
               style='--instructors-name-heading-custom-font-size: 1.4rem; --instructors-name-heading-custom-line-height: 1.2; --instructors-name-heading-custom-letter-spacing: 1px;--instructors-title-heading-custom-font-size: 1rem; --instructors-title-heading-custom-line-height: 1.2; --instructors-title-heading-custom-letter-spacing: 1px;'>
 
               <div class="instructor col-12 col-lg-6 col-xl-4 three-column">
 
 
-                <div class="instructor-container  no-card-border">
+                <div class="instructor-container  no-card-border" onclick="toggleContent('instructor-mike')">
 
                   <div class="instructor-image">
                     <img decoding="async"
@@ -1452,15 +1461,15 @@
 
                   <div class="instructor-content">
                     <div class="instructor-info" style="text-align: center;">
-
                       <h5 class="instructor-name has-font-size has-line-height has-letter-spacing">
                         Mike Romano </h5>
-
-
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Head Coach/Owner </h6>
-                    </div>
+                    </div><div class="hidden-content" style="display: none;" id="instructor-mike">
+                    <p>Head coach, owner and founder of Freestyle Dojo. Mike's laid back demeanor balanced with his love for hard work really sets the tone of Freestyle. He believes Jiu Jitsu can be the vehicle for self growth, challenge and community that everyone is looking for. After 17 years of Nogi training at the top gyms in Canada, Mike's classes offer a great balance of traditional drills, CLA and live sparring to help you reach your maximum potential.</p>
                   </div>
+                  </div>
+                  
                 </div>
 
 
@@ -1469,7 +1478,7 @@
               <div class="instructor col-12 col-lg-6 col-xl-4 three-column">
 
 
-                <div class="instructor-container  no-card-border">
+                <div class="instructor-container  no-card-border" onclick="toggleContent('instructor-jesse')">
 
                   <div class="instructor-image">
                     <img decoding="async"
@@ -1486,7 +1495,9 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Morning Coach/Owner </h6>
-                    </div>
+                    </div><div class="hidden-content" style="display: none;" id="instructor-jesse">
+                    <p>Coach, owner and co-founder of Freestyle Dojo. Jesse's coaching style is rooted in precision and technical excellence. With a broad and deep knowledge of all things Nogi, his teaching will leave you with a complete understanding of the class curriculum. With boundless creativity and enthusiasm for grappling, Jesse can alter you're very perception of what is possible. To sum him up in 3 words, Precision, excellence, creativity.</p>
+                  </div>
                   </div>
                 </div>
 
@@ -1496,7 +1507,7 @@
               <div class="instructor col-12 col-lg-6 col-xl-4 three-column">
 
 
-                <div class="instructor-container  no-card-border">
+                <div class="instructor-container  no-card-border" onclick="toggleContent('instructor-daniel')">
 
                   <div class="instructor-image">
                     <img decoding="async"
@@ -1514,7 +1525,9 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Coach </h6>
-                    </div>
+                    </div><div class="hidden-content" style="display: none;" id="instructor-daniel">
+                    <p>A black belt from Toronto Nogi, Daniel lends his skills and expertise every Monday for Fundamentals. He teaches a classic style that is a perfect introduction for our beginners. With absolutely no wasted movement or unnecessary explanation, Daniel knows how to optimize you're learning. In the truest spirit of Jiu Jitsu the power of skill and leverage.</p>
+                  </div>
                   </div>
                 </div>
 
@@ -1524,7 +1537,7 @@
               <div class="instructor col-12 col-lg-6 col-xl-4 three-column">
 
 
-                <div class="instructor-container  no-card-border">
+                <div class="instructor-container  no-card-border" onclick="toggleContent('instructor-max')">
 
                   <div class="instructor-image">
                     <img decoding="async"
@@ -1541,7 +1554,9 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Kids Coach </h6>
-                    </div>
+                    </div><div class="hidden-content" style="display: none;" id="instructor-max">
+                    <p>Max brings an unmathed energy to our kids program. With a background in wrestling and a degree in childhood education, you can rest assured you're kids are under great guidance. Max is tough, thoughtful, patient and tenacious. He knows how to lead a room and bring out the best in his students. </p>
+                  </div>
                   </div>
                 </div>
 
@@ -1551,7 +1566,7 @@
               <div class="instructor col-12 col-lg-6 col-xl-4 three-column">
 
 
-                <div class="instructor-container  no-card-border">
+                <div class="instructor-container  no-card-border" onclick="toggleContent('instructor-graham')">
 
                   <div class="instructor-image">
                     <img decoding="async"
@@ -1569,7 +1584,9 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Strength &#038; Conditioning Coach </h6>
-                    </div>
+                    </div><div class="hidden-content" style="display: none;" id="instructor-graham">
+                    <p>One of our first students, Graham excels in everything he does. From rugby to Jiu Jitsu and now coaching strength and conditioning. He combines all of his experience into making you better, faster and stronger.</p>
+                  </div>
                   </div>
                 </div>
 
