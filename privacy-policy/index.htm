@@ -45,6 +45,15 @@
     .wp-block-post-content {
       display: flow-root
     }
+    .open {
+      display: block;
+      pointer-events: auto;
+    }
+
+    .close {
+      display: none;
+      pointer-events: none;
+    }
   </style>
   <style id='wp-block-group-inline-css'>
     .wp-block-group {
@@ -987,8 +996,7 @@
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485 nav-item"><a
                       href="https://erezyaron.github.io/freestyle-2025/memberships/"
                       class="nav-link wp-element-button"><span class="text-container">Memberships</span></a></li>
-                </ul>
-                <ul class="navbar-nav navbar-links">
+               
 
                   <li class="menu-item nav-item">
                     <a href="https://erezyaron.github.io/freestyle-2025/schedule/" target=""
@@ -1004,7 +1012,34 @@
                       <span class="text-container">Students</span>
                     </a>
                   </li>
-
+                  <li class="menu-item nav-item">
+                    <div onclick="showMenu(event)" class="wp-element-button btn-signup nav-link" style="cursor: pointer;">
+                      <span class="text-container" >More ... </span>
+                    </div>
+                    <ul id="more-links" class="close" style="position: absolute;z-index: 1000; right: 0;">
+                      <li class="menu-item nav-item">
+                        <a href="../summer-camp/"
+                          class="wp-element-button btn-signup nav-link"
+                          style="margin-top: 0;">
+                          <span class="text-container">Summer Camp</span>
+                        </a>
+                      </li>
+                      <li class="menu-item nav-item">
+                        <a href="/Gallery"
+                          class="wp-element-button btn-signup nav-link"
+                          style="margin-top: 0;">
+                          <span class="text-container">Personal Training</span>
+                        </a>
+                      </li>
+                      <li class="menu-item nav-item">
+                        <a href="/Gallery"
+                          class="wp-element-button btn-signup nav-link"
+                          style="margin-top: 0;">
+                          <span class="text-container">Gallery</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
 
               </div>
@@ -1025,7 +1060,32 @@
         </div>
       </div>
     </header>
-
+    <script>
+      function showMenu() {
+        var links = $("#more-links");
+        event.stopPropagation(); 
+        if (links.hasClass('open')) {
+          links.removeClass('open');
+          links.addClass('close');
+        } else {
+          links.removeClass('close');
+          links.addClass('open');
+        }
+      }
+document.addEventListener('click', function(event) {
+  const navContainer = document.querySelector('#more-links');
+  if (!navContainer.contains(event.target)) {
+    navContainer.classList.remove('open');
+    navContainer.classList.add('close');
+  }
+});
+document.querySelector('#more-links').addEventListener('mouseleave', function() {
+    if (window.innerWidth > 768) { // Only on desktop (adjust width as needed)
+      navContainer.classList.remove('open');
+    navContainer.classList.add('close');
+    }
+  });
+    </script>
 
     <main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
       <div
