@@ -751,6 +751,7 @@
     .has-barlow-font-family {
       font-family: var(--wp--preset--font-family--barlow) !important;
     }
+
     .hidden-content {
       display: none;
       margin-top: 10px;
@@ -791,10 +792,8 @@
     href='https://erezyaron.github.io/freestyle-2025/themes/bootstrap.min.css?ver=2.1.4' media='' />
   <link rel='stylesheet' id='strength-bootstrap-5-css-map-css'
     href='https://erezyaron.github.io/freestyle-2025/themes/bootstrap.min.css.map?ver=2.1.4' media='' />
-  <link rel='stylesheet' id='style-main-css'
-    href='themes/index.min.css?ver=2.1.4' media='' />
-  <link rel='stylesheet' id='style-main-map-css'
-    href='themes/index.min.css.map?ver=2.1.4' media='' />
+  <link rel='stylesheet' id='style-main-css' href='themes/index.min.css?ver=2.1.4' media='' />
+  <link rel='stylesheet' id='style-main-map-css' href='themes/index.min.css.map?ver=2.1.4' media='' />
   <script src="https://erezyaron.github.io/freestyle-2025/themes/DOMPurify.min.js?ver=2.5.8"
     id="bodhi-dompurify-library-js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js?ver=3.7.1" id="jquery-js"></script>
@@ -813,6 +812,16 @@
 
   <link rel='shortlink' href='https://erezyaron.github.io/freestyle-2025/' />
   <style>
+    .open {
+      display: block;
+      pointer-events: auto;
+    }
+
+    .close {
+      display: none;
+      pointer-events: none;
+    }
+
     .editor-styles-wrapper .is-root-container .wp-element-button,
     .editor-styles-wrapper .is-root-container .wp-element-button:not(:disabled):not(.disabled),
     .editor-styles-wrapper .wp-element-button:not(:disabled):not(.disabled),
@@ -947,13 +956,14 @@
           </div>
           <div id="floating-bar-header-message">
 
-            <button type="button" class="floating-bar-button" >
+            <button type="button" class="floating-bar-button">
               <span style="--floating-bar-message-font-size: 0.8rem;">
                 <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
-                    type="text/javascript"></script><healcode-widget data-version="0.2"
-                    data-link-class="healcode-contract-text-link" data-site-id="103311"
-                    data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false"
-                    data-type="contract-link" data-inner-html="Elevate Your Training &#038; Growth With A Membership" /> </span>
+                  type="text/javascript"></script><healcode-widget data-version="0.2"
+                  data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                  data-service-id="100" data-bw-identity-site="false" data-type="contract-link"
+                  data-inner-html="Elevate Your Training &#038; Growth With A Membership" />
+              </span>
             </button>
 
           </div>
@@ -972,7 +982,6 @@
         </div>
       </div>
     </section>
-
     <header class="wp-block-template-part">
       <div class="header">
         <div class="navigation-header site-header alignfull has-solid-border-bottom"
@@ -984,8 +993,7 @@
                has-link-override-colors"
               style="--header-nav-link-text-color: var(--wp--preset--color--brand-color); --header-nav-link-text-hover-color: var(--wp--preset--color--brand-color);">
               <a class="school-logo" href="https://erezyaron.github.io/freestyle-2025/">
-                <img 
-                  src="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-Logo-300x78.png"
+                <img src="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-Logo-300x78.png"
                   alt="Freestyle Dojo Logo" style="--site-header-site-logo-size: 250px;">
               </a>
               <div class="toggle-container">
@@ -1001,23 +1009,47 @@
                   <li id="menu-item-485"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485 nav-item"><a
                       href="https://erezyaron.github.io/freestyle-2025/memberships/"
-                      class="nav-link wp-element-button"><span class="text-container">Memberships</span></a></li>
-                </ul>
-                <ul class="navbar-nav navbar-links">
-
+                      class="nav-link wp-element-button"><span class="text-container">Memberships</span></a>
+                  </li>
                   <li class="menu-item nav-item">
                     <a href="https://erezyaron.github.io/freestyle-2025/schedule/" target=""
                       class="wp-element-button btn-login nav-link">
                       <span class="text-container">Schedule</span>
                     </a>
                   </li>
-
-
                   <li class="menu-item nav-item">
                     <a href="https://www.mindbodyonline.com/explore/account/profile" target="_blank"
                       class="wp-element-button btn-signup nav-link">
                       <span class="text-container">Students</span>
                     </a>
+                  </li>
+                  <li class="menu-item nav-item">
+                    <div onclick="showMenu(event)" class="wp-element-button btn-signup nav-link" style="cursor: pointer;">
+                      <span class="text-container" >More ... </span>
+                    </div>
+                    <ul id="more-links" class="close" style="position: absolute;z-index: 1000; right: 0;">
+                      <li class="menu-item nav-item">
+                        <a href="/SummerCamp"
+                          class="wp-element-button btn-signup nav-link"
+                          style="margin-top: 0;">
+                          <span class="text-container">Summer Camp</span>
+                        </a>
+                      </li>
+                      <li class="menu-item nav-item">
+                        <a href="/Gallery"
+                          class="wp-element-button btn-signup nav-link"
+                          style="margin-top: 0;">
+                          <span class="text-container">Personal Training</span>
+                        </a>
+                      </li>
+                      <li class="menu-item nav-item">
+                        <a href="/Gallery"
+                          class="wp-element-button btn-signup nav-link"
+                          style="margin-top: 0;">
+                          <span class="text-container">Gallery</span>
+                        </a>
+                      </li>
+                    </ul>
                   </li>
 
                 </ul>
@@ -1040,7 +1072,32 @@
         </div>
       </div>
     </header>
-
+    <script>
+      function showMenu() {
+        var links = $("#more-links");
+        event.stopPropagation(); 
+        if (links.hasClass('open')) {
+          links.removeClass('open');
+          links.addClass('close');
+        } else {
+          links.removeClass('close');
+          links.addClass('open');
+        }
+      }
+document.addEventListener('click', function(event) {
+  const navContainer = document.querySelector('#more-links');
+  if (!navContainer.contains(event.target)) {
+    navContainer.classList.remove('open');
+    navContainer.classList.add('close');
+  }
+});
+document.querySelector('#more-links').addEventListener('mouseleave', function() {
+    if (window.innerWidth > 768) { // Only on desktop (adjust width as needed)
+      navContainer.classList.remove('open');
+    navContainer.classList.add('close');
+    }
+  });
+    </script>
 
     <main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
       <div
@@ -1068,8 +1125,14 @@
                         <h3><span style="color: #ffffff;">Community, Discipline, Freedom</span></h3>
                       </div>
                       <div class="billboard-link">
-                        <button type="button" class="billboard-button wp-element-button" >
-                          <span class="text-container"><script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false" data-type="contract-link" data-inner-html="Get Started Today" /></span>
+                        <button type="button" class="billboard-button wp-element-button">
+                          <span class="text-container">
+                            <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
+                              type="text/javascript"></script><healcode-widget data-version="0.2"
+                              data-link-class="healcode-contract-text-link" data-site-id="103311"
+                              data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false"
+                              data-type="contract-link" data-inner-html="Get Started Today" />
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -1089,10 +1152,10 @@
             style="--content-block-card-background-color: var(--wp--preset--color--base-2);">
             <div class="row">
               <div class="col-12 page-section-header">
-              <img decoding="async" class="aligncenter wp-image-7736 size-thumbnail"
+                <img decoding="async" class="aligncenter wp-image-7736 size-thumbnail"
                   src="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-LogoMark-150x150.png"
                   alt="Freestyle Dojo Logo" width="150" height="150" />
-            <h4 style='color: #ce4b2c;'>
+                <h4 style='color: #ce4b2c;'>
                   Welcome To </h4>
                 <h3>
                   Freestyle Dojo </h3>
@@ -1102,7 +1165,12 @@
                   <p style="text-align: center;" data-prosemirror-content-type="node"
                     data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 []">
                     <br />
-                    We are located in Toronto, Ontario serving the Greater Toronto Area! The name Freestyle is due to how we teach and encourage our students to make martial arts their own. We teach only the highest level of technique focusing on strong understanding of concepts and creativity in execution. Everyone is welcome at Freestyle Dojo, we offer both a friendly learning environment for beginners and hard competitive training sessions for advanced martial artists. Check out our schedule, try out a class and we will see you on the mats!
+                    We are located in Toronto, Ontario serving the Greater Toronto Area! The name Freestyle is due to
+                    how we teach and encourage our students to make martial arts their own. We teach only the highest
+                    level of technique focusing on strong understanding of concepts and creativity in execution.
+                    Everyone is welcome at Freestyle Dojo, we offer both a friendly learning environment for beginners
+                    and hard competitive training sessions for advanced martial artists. Check out our schedule, try out
+                    a class and we will see you on the mats!
                   </p>
                 </div>
               </div>
@@ -1136,11 +1204,24 @@
                 <div class="col-md-4">
                   <div class="cta-link-container">
                     <button type="button" class="cta-button wp-element-button" style='width: 185px ;'>
-                      <span class="text-container"><script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false" data-type="contract-link" data-inner-html=" Join Now " /></span>
+                      <span class="text-container">
+                        <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
+                          type="text/javascript"></script><healcode-widget data-version="0.2"
+                          data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                          data-service-id="100" data-bw-identity-site="false" data-type="contract-link"
+                          data-inner-html=" Join Now " />
+                      </span>
                     </button>
-                    </div><div class="cta-link-container">
+                  </div>
+                  <div class="cta-link-container">
                     <button type="button" class="cta-button wp-element-button" style=' width: 185px;'>
-                      <span class="text-container"><script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false" data-type="contract-link" data-inner-html="Contact Us" /></span>
+                      <span class="text-container">
+                        <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
+                          type="text/javascript"></script><healcode-widget data-version="0.2"
+                          data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                          data-service-id="100" data-bw-identity-site="false" data-type="contract-link"
+                          data-inner-html="Contact Us" />
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -1297,11 +1378,21 @@
                     <div class="card-content">
                       <div class="card-text">
                         <h4>About Us</h4>
-                        <p>Freestyle Dojo specializes in No-gi Jiu-Jitsu and MMA style striking. We work to uplift every student past their limits on and off the mat. We strive to build strong communities and camaraderie primarily through training but also This comes through social events like holiday celebrations, hangouts, and UFC watch parties!
-                          What sets us apart from other gyms is the breadth of technique and holistic approach we take to training. From their first month our students are taught with the ultimate goal in mind, to create as complete a martial artist as possible. All our lessons are taught with safety and self-care in mind, instructing students how to protect themselves and their training partners. We ensure the best instruction with a variety of methods: coaches and students rolling together, 1-on-1 time, after-class help, and tape review. All of this awaits you at Freestyle Dojo!</p>
+                        <p>Freestyle Dojo specializes in No-gi Jiu-Jitsu and MMA style striking. We work to uplift every
+                          student past their limits on and off the mat. We strive to build strong communities and
+                          camaraderie primarily through training but also This comes through social events like holiday
+                          celebrations, hangouts, and UFC watch parties!
+                          What sets us apart from other gyms is the breadth of technique and holistic approach we take
+                          to training. From their first month our students are taught with the ultimate goal in mind, to
+                          create as complete a martial artist as possible. All our lessons are taught with safety and
+                          self-care in mind, instructing students how to protect themselves and their training partners.
+                          We ensure the best instruction with a variety of methods: coaches and students rolling
+                          together, 1-on-1 time, after-class help, and tape review. All of this awaits you at Freestyle
+                          Dojo!</p>
                       </div>
 
                     </div>
+                    
                   </div>
                 </div>
 
@@ -1309,7 +1400,7 @@
               </div>
 
 
-              
+
 
 
             </div>
@@ -1376,15 +1467,16 @@
                 Freestyle Dojo </h3>
               <div class="instructor-description">
                 <p style="text-align: center;"><span
-                    style="text-align: left; color: var(--wp--preset--color--primary-text); font-size: 16px;"></span></p>
+                    style="text-align: left; color: var(--wp--preset--color--primary-text); font-size: 16px;"></span>
+                </p>
               </div>
             </div>
-<script>
-  function toggleContent(id) {
-    const content = document.getElementById(id);
-    content.style.display = content.style.display === "none" ? "block" : "none";
-  }
-</script>
+            <script>
+              function toggleContent(id) {
+                const content = document.getElementById(id);
+                content.style.display = content.style.display === "none" ? "block" : "none";
+              }
+            </script>
             <div class="row instructors-container"
               style='--instructors-name-heading-custom-font-size: 1.4rem; --instructors-name-heading-custom-line-height: 1.2; --instructors-name-heading-custom-letter-spacing: 1px;--instructors-title-heading-custom-font-size: 1rem; --instructors-title-heading-custom-line-height: 1.2; --instructors-title-heading-custom-letter-spacing: 1px;'>
 
@@ -1406,11 +1498,16 @@
                         Mike Romano </h5>
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Head Coach/Owner </h6>
-                    </div><div class="hidden-content" style="display: none;" id="instructor-mike">
-                    <p>Head coach, owner and founder of Freestyle Dojo. Mike's laid back demeanor balanced with his love for hard work really sets the tone of Freestyle. He believes Jiu Jitsu can be the vehicle for self growth, challenge and community that everyone is looking for. After 17 years of Nogi training at the top gyms in Canada, Mike's classes offer a great balance of traditional drills, CLA and live sparring to help you reach your maximum potential.</p>
+                    </div>
+                    <div class="hidden-content" style="display: none;" id="instructor-mike">
+                      <p>Head coach, owner and founder of Freestyle Dojo. Mike's laid back demeanor balanced with his
+                        love for hard work really sets the tone of Freestyle. He believes Jiu Jitsu can be the vehicle
+                        for self growth, challenge and community that everyone is looking for. After 17 years of Nogi
+                        training at the top gyms in Canada, Mike's classes offer a great balance of traditional drills,
+                        CLA and live sparring to help you reach your maximum potential.</p>
+                    </div>
                   </div>
-                  </div>
-                  
+
                 </div>
 
 
@@ -1436,9 +1533,14 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Morning Coach/Owner </h6>
-                    </div><div class="hidden-content" style="display: none;" id="instructor-jesse">
-                    <p>Coach, owner and co-founder of Freestyle Dojo. Jesse's coaching style is rooted in precision and technical excellence. With a broad and deep knowledge of all things Nogi, his teaching will leave you with a complete understanding of the class curriculum. With boundless creativity and enthusiasm for grappling, Jesse can alter you're very perception of what is possible. To sum him up in 3 words, Precision, excellence, creativity.</p>
-                  </div>
+                    </div>
+                    <div class="hidden-content" style="display: none;" id="instructor-jesse">
+                      <p>Coach, owner and co-founder of Freestyle Dojo. Jesse's coaching style is rooted in precision
+                        and technical excellence. With a broad and deep knowledge of all things Nogi, his teaching will
+                        leave you with a complete understanding of the class curriculum. With boundless creativity and
+                        enthusiasm for grappling, Jesse can alter you're very perception of what is possible. To sum him
+                        up in 3 words, Precision, excellence, creativity.</p>
+                    </div>
                   </div>
                 </div>
 
@@ -1466,9 +1568,13 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Coach </h6>
-                    </div><div class="hidden-content" style="display: none;" id="instructor-daniel">
-                    <p>A black belt from Toronto Nogi, Daniel lends his skills and expertise every Monday for Fundamentals. He teaches a classic style that is a perfect introduction for our beginners. With absolutely no wasted movement or unnecessary explanation, Daniel knows how to optimize you're learning. In the truest spirit of Jiu Jitsu the power of skill and leverage.</p>
-                  </div>
+                    </div>
+                    <div class="hidden-content" style="display: none;" id="instructor-daniel">
+                      <p>A black belt from Toronto Nogi, Daniel lends his skills and expertise every Monday for
+                        Fundamentals. He teaches a classic style that is a perfect introduction for our beginners. With
+                        absolutely no wasted movement or unnecessary explanation, Daniel knows how to optimize you're
+                        learning. In the truest spirit of Jiu Jitsu the power of skill and leverage.</p>
+                    </div>
                   </div>
                 </div>
 
@@ -1495,9 +1601,13 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Kids Coach </h6>
-                    </div><div class="hidden-content" style="display: none;" id="instructor-max">
-                    <p>Max brings an unmathed energy to our kids program. With a background in wrestling and a degree in childhood education, you can rest assured you're kids are under great guidance. Max is tough, thoughtful, patient and tenacious. He knows how to lead a room and bring out the best in his students. </p>
-                  </div>
+                    </div>
+                    <div class="hidden-content" style="display: none;" id="instructor-max">
+                      <p>Max brings an unmathed energy to our kids program. With a background in wrestling and a degree
+                        in childhood education, you can rest assured you're kids are under great guidance. Max is tough,
+                        thoughtful, patient and tenacious. He knows how to lead a room and bring out the best in his
+                        students. </p>
+                    </div>
                   </div>
                 </div>
 
@@ -1525,9 +1635,12 @@
 
                       <h6 class="instructor-title has-font-size has-line-height has-letter-spacing">
                         Strength &#038; Conditioning Coach </h6>
-                    </div><div class="hidden-content" style="display: none;" id="instructor-graham">
-                    <p>One of our first students, Graham excels in everything he does. From rugby to Jiu Jitsu and now coaching strength and conditioning. He combines all of his experience into making you better, faster and stronger.</p>
-                  </div>
+                    </div>
+                    <div class="hidden-content" style="display: none;" id="instructor-graham">
+                      <p>One of our first students, Graham excels in everything he does. From rugby to Jiu Jitsu and now
+                        coaching strength and conditioning. He combines all of his experience into making you better,
+                        faster and stronger.</p>
+                    </div>
                   </div>
                 </div>
 
@@ -1564,11 +1677,24 @@
                 <div class="col-md-4">
                   <div class="cta-link-container">
                     <button type="button" class="cta-button wp-element-button" style='width: 185px ;'>
-                      <span class="text-container"><script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false" data-type="contract-link" data-inner-html=" Join Now " /></span>
+                      <span class="text-container">
+                        <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
+                          type="text/javascript"></script><healcode-widget data-version="0.2"
+                          data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                          data-service-id="100" data-bw-identity-site="false" data-type="contract-link"
+                          data-inner-html=" Join Now " />
+                      </span>
                     </button>
-                    </div><div class="cta-link-container">
+                  </div>
+                  <div class="cta-link-container">
                     <button type="button" class="cta-button wp-element-button" style=' width: 185px;'>
-                      <span class="text-container"><script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script><healcode-widget data-version="0.2" data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false" data-type="contract-link" data-inner-html="Contact Us" /></span>
+                      <span class="text-container">
+                        <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
+                          type="text/javascript"></script><healcode-widget data-version="0.2"
+                          data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                          data-service-id="100" data-bw-identity-site="false" data-type="contract-link"
+                          data-inner-html="Contact Us" />
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -1674,7 +1800,7 @@
                           <li>
                             <p data-renderer-start-pos="96">Teens (Ages 12-15)</p>
                           </li>
-                          
+
                         </ul>
                       </div>
 
@@ -1787,7 +1913,7 @@
                           <li>
                             <p data-renderer-start-pos="96">Teens (Ages 12-15)</p>
                           </li>
-                          
+
                         </ul>
                       </div>
 
@@ -1807,8 +1933,7 @@
         <section class="container-fluid testimonial-cards alignfull"
           style="color: var(--wp--preset--color--primary-text);background-color:  var(--wp--preset--color--brand-color);">
           <div class="row testimonials-container flex-row">
-            <div class="col-lg-6 testimonial-content-column"
-              style="padding-bottom: var(--wp--preset--spacing--20);;">
+            <div class="col-lg-6 testimonial-content-column" style="padding-bottom: var(--wp--preset--spacing--20);;">
               <div class="testimonial-info">
                 <div class="testimonial-heading-container">
                   <h3 class="testimonial-title">
@@ -1827,29 +1952,29 @@
                   <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="0" class='active'
                     aria-current='true' aria-label="Slide 1">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="1" class='' aria-current='false'
-                    aria-label="Slide 2">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="1" class=''
+                    aria-current='false' aria-label="Slide 2">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="2"class='' aria-current='false'
-                    aria-label="Slide 3">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="2" class=''
+                    aria-current='false' aria-label="Slide 3">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="4" class='' aria-current='false'
-                     aria-label="Slide 4">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="4" class=''
+                    aria-current='false' aria-label="Slide 4">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="5"class='' aria-current='false'
-                    aria-label="Slide 5">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="5" class=''
+                    aria-current='false' aria-label="Slide 5">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="6"class='' aria-current='false'
-                    aria-label="Slide 6">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="6" class=''
+                    aria-current='false' aria-label="Slide 6">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="7" class='' aria-current='false'
-                     aria-label="Slide 7">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="7" class=''
+                    aria-current='false' aria-label="Slide 7">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="8"class='' aria-current='false'
-                    aria-label="Slide 8">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="8" class=''
+                    aria-current='false' aria-label="Slide 8">
                   </button>
-                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="9"class='' aria-current='false'
-                    aria-label="Slide 9">
+                  <button type="button" data-bs-target="#testimonialCardCarousel" data-bs-slide-to="9" class=''
+                    aria-current='false' aria-label="Slide 9">
                   </button>
                 </div>
                 <div class="row testimonial-cards-container carousel-inner">
@@ -1860,7 +1985,12 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>I’ve had the pleasure of witnessing both my son and daughter flourish, with a bounty of previously untapped confidence. Navigating, post-Covid, thru pivotal years has been facilitated by a tremendously engaged Dojo master, Mike, and a manager, Jen, who have delicately balanced the kids’ emotional and spiritual wellbeing with a need to equip them with confidence building tools to address life’s challenges with an assertive yet measured approach.....</p>
+                          <p>I’ve had the pleasure of witnessing both my son and daughter flourish, with a bounty of
+                            previously untapped confidence. Navigating, post-Covid, thru pivotal years has been
+                            facilitated by a tremendously engaged Dojo master, Mike, and a manager, Jen, who have
+                            delicately balanced the kids’ emotional and spiritual wellbeing with a need to equip them
+                            with confidence building tools to address life’s challenges with an assertive yet measured
+                            approach.....</p>
                         </div>
                         <div class="testimonial-card-name">
                           <p>Julian Lorenzo </p>
@@ -1923,7 +2053,8 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>My favourite NoGi BJJ gym, and I've trained at several places over the last few years.  I have to commute further than normal to get here and its still worth it.
+                          <p>My favourite NoGi BJJ gym, and I've trained at several places over the last few years. I
+                            have to commute further than normal to get here and its still worth it.
                             It's great for all levels, from beginner to black belt.</p>
                         </div>
                         <div class="testimonial-card-name">
@@ -1944,7 +2075,10 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>I had a fun time learning the techniques of the takedowns and the guard. Mike is a great teacher. He help me correct my mistakes while in guard and it help defend myself from getting mounted when we were situational sparring. The situational rolling was very fun and a great learning experience. Freestyle dojo is great place to learn No-Gi Jiu-Jitsu.</p>
+                          <p>I had a fun time learning the techniques of the takedowns and the guard. Mike is a great
+                            teacher. He help me correct my mistakes while in guard and it help defend myself from
+                            getting mounted when we were situational sparring. The situational rolling was very fun and
+                            a great learning experience. Freestyle dojo is great place to learn No-Gi Jiu-Jitsu.</p>
                         </div>
                         <div class="testimonial-card-name">
                           <p>Kevin Nguyen</p>
@@ -1965,7 +2099,9 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>I want to thank coach Mike and freestyle dojo. I’ve done some private jiujitsu training, striking/kicking but best of all, personal fitness training. Ive been dealing with chronic neck , shoulder , mid back pain for the past 15 years. Despite years of ongoing .....</p>
+                          <p>I want to thank coach Mike and freestyle dojo. I’ve done some private jiujitsu training,
+                            striking/kicking but best of all, personal fitness training. Ive been dealing with chronic
+                            neck , shoulder , mid back pain for the past 15 years. Despite years of ongoing .....</p>
                         </div>
                         <div class="testimonial-card-name">
                           <p>Andrea Hsu</p>
@@ -1986,7 +2122,9 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>Awesome Gym, Mike is an ELITE instructor. Very welcoming community, and good mix of beginners and more experienced practitioners. Felt at home right away, will definitely be back!</p>
+                          <p>Awesome Gym, Mike is an ELITE instructor. Very welcoming community, and good mix of
+                            beginners and more experienced practitioners. Felt at home right away, will definitely be
+                            back!</p>
                         </div>
                         <div class="testimonial-card-name">
                           <p>
@@ -2010,7 +2148,8 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>Fantastic atmosphere. Gym was spacious, clean and well maintained. Instructors are very approachable and easy to communicate with.</p>
+                          <p>Fantastic atmosphere. Gym was spacious, clean and well maintained. Instructors are very
+                            approachable and easy to communicate with.</p>
                         </div>
                         <div class="testimonial-card-name">
                           <p>
@@ -2056,7 +2195,10 @@
                           <div class="testimonial-card-quote">
                             <i class='fa-sharp fa-solid fa-quote-left'></i>
                           </div>
-                          <p>Freestyle Dojo offers free trial for the first class. I had minimal to almost zero knowledge on jiu jitsu before coming here. However, Mike and Jesse have been very patient and encouraging. You can tell they care a lot about their students and the work they do. And they are just super cool people.....</p>
+                          <p>Freestyle Dojo offers free trial for the first class. I had minimal to almost zero
+                            knowledge on jiu jitsu before coming here. However, Mike and Jesse have been very patient
+                            and encouraging. You can tell they care a lot about their students and the work they do. And
+                            they are just super cool people.....</p>
                         </div>
                         <div class="testimonial-card-name">
                           <p>
@@ -2185,7 +2327,7 @@
 
                       <div class="location-info location-number FreestyleDojo">
                         <div class="location-icon">
-                          <i class="fa fa-phone fa- " ></i>
+                          <i class="fa fa-phone fa- "></i>
                         </div>
                         <div class="location-text">
                           647-245-8829 </div>
@@ -2196,7 +2338,7 @@
 
                       <div class="location-info location-address FreestyleDojo">
                         <div class="location-icon">
-                          <i class="fa fa-map-marker fa- " ></i>
+                          <i class="fa fa-map-marker fa- "></i>
                         </div>
                         <div class="location-text">
                           191 Geary Ave, Toronto, ON M6H2C1 </div>
@@ -2246,7 +2388,8 @@
               <nav class="navigation-footer" role="navigation">
                 <ul id="menu-footer" class="nav-footer nav flex-column">
                   <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484">
-                    <a href="https://erezyaron.github.io/freestyle-2025/memberships/">Memberships</a></li>
+                    <a href="https://erezyaron.github.io/freestyle-2025/memberships/">Memberships</a>
+                  </li>
                   <li id="menu-item-7612"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7612"><a
                       href="https://erezyaron.github.io/freestyle-2025/schedule/">Schedule</a></li>
@@ -2256,7 +2399,8 @@
                   <li id="menu-item-7670"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-7670">
                     <a rel="privacy-policy" href="https://erezyaron.github.io/freestyle-2025/privacy-policy/">Privacy
-                      Policy</a></li>
+                      Policy</a>
+                  </li>
                 </ul>
               </nav>
             </div>
