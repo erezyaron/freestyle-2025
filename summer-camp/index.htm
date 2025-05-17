@@ -798,6 +798,69 @@
 
 
   <style>
+     td healcode-widget a.healcode-link {
+      background-color: #457b9d;
+      color: white;
+      margin-top: 0.5em;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+#summercamp table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      border-bottom: 2px solid #509595;
+      width: 75%;
+      border-radius: 10px;
+    }
+
+    #summercamp th {
+      border-radius: 10px;
+      border-bottom: 2px solid #509595;
+      border-top: 2px solid #509595;
+      border-right: 2px solid #509595;
+      border-left: 2px solid #509595;
+      text-align: center;
+      padding: 3px;
+    }
+
+    #summercamp td {
+      border-right: 2px solid #509595;
+      border-left: 2px solid #509595;
+      border-top: none;
+      border-bottom: none;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    #prices table {
+      border-collapse: collapse;
+      border-bottom: 2px solid #509595;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    #prices th {
+      border-radius: 10px;
+      border-bottom: none;
+      border-top: 2px solid #509595;
+      border-right: 2px solid #509595;
+      border-left: 2px solid #509595;
+      text-align: center;
+      padding: 3px;
+    }
+
+    #prices td {
+      border-right: 2px solid #509595;
+      border-left: 2px solid #509595;
+      border-top: none;
+      border-bottom: none;
+      text-align: center;
+      padding: 3px;
+      border-radius: 10px;
+    }
     .editor-styles-wrapper .is-root-container .wp-element-button,
     .editor-styles-wrapper .is-root-container .wp-element-button:not(:disabled):not(.disabled),
     .editor-styles-wrapper .wp-element-button:not(:disabled):not(.disabled),
@@ -1028,113 +1091,179 @@
 
 
     <main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
-      <div
-        class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-        <section class="page-section page-section-content-block alignfull"
-          style="padding-top: var(--wp--preset--spacing--20); padding-bottom: var(--wp--preset--spacing--20);color: var(--wp--preset--color--primary-text);">
-
-          <section class="page-section page-section-content-block alignfull has-text-color has-primary-text-color"
-          style="padding-top: var(--wp--preset--spacing--20); padding-bottom: var(--wp--preset--spacing--10);background-color:  var(--wp--preset--color--card-color);">
-
-
-          <div class="container content-block-container"
-            style="--content-block-card-background-color: var(--wp--preset--color--base-2);">
-            <div class="row">
-              <div class="col-12 page-section-header">
-                <img decoding="async" class="aligncenter wp-image-7736 size-thumbnail"
-                  src="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-LogoMark-150x150.png"
-                  alt="Freestyle Dojo Logo" width="150" height="150" />
-                <h3>
-                  Summer Camp </h3>
-                  <h4 style='color: #ce4b2c;'>
-                    Ages 7-13 | Starts July 7 </h4>
+      <section id="summercamp" class="page-section page-section-content-cards alignfull"
+      style="background-color:  var(--wp--preset--color--base);color: var(--wp--preset--color--primary-text);padding-top: var(--wp--preset--spacing--20); padding-bottom: var(--wp--preset--spacing--10);;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 page-section-header">
+            <h3>
+              Summer Camp </h3>
+              <h4 style='color: #ce4b2c;'>
+                Ages 7-13 | Starts July 7 </h4>
+          </div>
+        </div>
+      </div>
+      <div id="cards">
+        <div class="container-fluid">
+          <div class="card-container">
+            <div class="row no-gutters row-eq-height  no-card-border">
+              <div class="col-lg-6 card-image-container">
+                <div class="card-image">
+                  <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-15-768x512.jpg"
+                      width="768" height="513" />
+                    <source media="(min-width: 768px)"
+                      srcset="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-15.jpg" width="2500"
+                      height="1670" />
+                    <img decoding="async"
+                      src="https://erezyaron.github.io/freestyle-2025/images/Freestyle-Dojo-15.jpg"
+                      alt="Freestyle Dojo interior gym in greater toronto area"
+                      style="object-fit: cover; object-position: center; filter: brightness(1) saturate(1) contrast(1)" />
+                  </picture>
                 </div>
-              <div class="col single-content-column">
-                <div class="content-block-content">
-                  <p style="text-align: center;" data-prosemirror-content-type="node"
-                    data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 []">
-                    <br />
+              </div>
+              <div class="col-lg-6 card-content-container" style=' background-color: #e8b352;'>
+                <div class="card-content">
+                  <div class="card-text">
                     <p><strong>Hey Parents!</strong></p><p>
-                  Looking for an exciting, active, and fun-filled summer experience for your child? Look no further! By
-                    popular demand, we’re bringing back the <strong>Freestyle Dojo Summer Camp</strong> and it’s bigger and
-                    better than ever! </p>
-                    <p><strong>What’s Included?</strong></p>
-                    <p>This camp program, which includes <strong>Brazilian Jiu-Jitsu, Wrestling, Gymnastics,</strong> and
-                      <strong>Sport-Specific Training,</strong> is designed to help your child build:</p>
-                    <ol>
-                      <li style="list-style-type: none">✔️ coordination</li>
-                      <li style="list-style-type: none">✔️ confidence</li>
-                      <li style="list-style-type: none">✔️ self-defence knowledge</li>
-                      <li style="list-style-type: none">✔️ lifelong love of movement</li>
-                    </ol>
-                    <p>Our experienced coaches foster a <strong>positive and inclusive environment</strong> where every camper
-                      feels like they belong. Each day is packed with <strong>games, martial arts, and playing sports!</strong>
-                    </p>
-                    <p><strong>📌 Camp Details:</strong><br />
-                    <ol style="list-style-type: none">
-                      <li style="list-style-type: none">📅 4 weeks starting July 7, 2025</li>
-                      <li style="list-style-type: none">🕘 Mon-Fri 9:00 AM to 4:00 PM (drop-off 8:30-9:00 am)</li>
-                      <li style="list-style-type: none">🧒 Ages 7–13</li>
-                      <li style="list-style-type: none">📍 191 Geary Ave, Toronto, ON M6H 2C1</li>
-                      <li style="list-style-type: none">🗓 Register for 1 week, 2 weeks, or the full 4 weeks</li>
-                      <li style="list-style-type: none">🎁 Every camper receives a Freestyle Dojo White Belt and Wristband to
-                        start their martial arts journey!</li>
-                    </ol>
-                    </p>
-                    <table>
-                      <th colspan="2" style="text-align: center;">Session Breakdown</th>
-                      <tr>
-                        <td style="text-align: center;">Session 1</td>
-                        <td style="text-align: center;">Session 2</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align: center;">Week 1 - July 7</td>
-                        <td style="text-align: center;">Week 3 - July 21</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align: center;">Week 2 - July 14</td>
-                        <td style="text-align: center;">Week 4 - July 28</td>
-                      </tr>
-                    </table>
-                    <p>Week 2 of each session builds on skills from Week 1 while still welcoming new campers!</p>
-                    <p><strong>Pricing:</strong></p>
-                    <p>
-                    <ol style="list-style-type: none">
-                      <li style="list-style-type: none">💲 1 Week – $300</li>
-                      <li style="list-style-type: none">💲 2 Week – $500 <i>(Save $100)</i></li>
-                      <li style="list-style-type: none">💲 4 Week – $900 <i>(Save $300)</i></li>
-                    </ol>
-                    ❗<strong>Early Bird Special:</strong> <strong>15% off</strong> if you register before <strong>May
-                      31st</strong>❗
-                    </p>
-                    <p><strong>Ready to register?</strong></p>
-                    <p>Visit <a title="Summer Camp Registration">
-                        <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
-                          type="text/javascript"></script><healcode-widget data-version="0.2"
-                          data-link-class="healcode-contract-text-link" data-site-id="103311" data-mb-site-id="5722081"
-                          data-service-id="100" data-bw-identity-site="false" data-type="contract-link"
-                          data-inner-html="this link" />
-                        </span>
-                      </a> to sign up today. Registration closes July 4th.</p>
-                    <p>If you would like to register for more than one week, please <a href="index.html#contact">contact us</a>,
-                      and we will process your registration.</p>
-                    <p>&nbsp;</p>
-                    <p>If you have any questions, please contact us.</p>
-                    <p>Let's make this summer one to remember.</p>
-                    <p><strong>See you on the mats! 👊</strong></p>
+                      Looking for an exciting, active, and fun-filled summer experience for your child? Look no further! By
+                        popular demand, we’re bringing back the <strong>Freestyle Dojo Summer Camp</strong> and it’s bigger and
+                        better than ever! </p>
+                        <p><strong>What’s Included?</strong></p>
+                        <p>This camp program, which includes <strong>Brazilian Jiu-Jitsu, Wrestling, Gymnastics,</strong> and
+                          <strong>Sport-Specific Training,</strong> is designed to help your child build:</p>
+                        <ol>
+                          <li style="list-style-type: none">✔️ coordination</li>
+                          <li style="list-style-type: none">✔️ confidence</li>
+                          <li style="list-style-type: none">✔️ self-defence knowledge</li>
+                          <li style="list-style-type: none">✔️ lifelong love of movement</li>
+                        </ol>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="card-container">       
+              <div class="row no-gutters row-eq-height  no-card-border">
+                <div class="col-lg-6 card-image-container">
+                  <div class="card-image">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="https://freestyledojo.mysites.io/wp-content/uploads/2025/03/Freestyle-Dojo-12-768x1024.jpg" width="768" height="1024">
+                      <source media="(min-width: 768px)" srcset="https://freestyledojo.mysites.io/wp-content/uploads/2025/03/Freestyle-Dojo-12.jpg" width="1875" height="2500">
+                      <img decoding="async" src="https://freestyledojo.mysites.io/wp-content/uploads/2025/03/Freestyle-Dojo-12.jpg" alt="Freestyle Dojo students sparring" style="object-fit: cover; object-position: center; filter: brightness(1) saturate(1) contrast(1)">
+                    </picture>
+                  </div>
+                </div>
+                <div class="col-lg-6 card-content-container" style=' background-color: #e8b352;'>
+                  <div class="card-content">
+                    <div class="card-text">
+                      <p>Our experienced coaches foster a <strong>positive and inclusive environment</strong> where every camper
+                        feels like they belong. Each day is packed with <strong>games, martial arts, and playing sports!</strong>
+                      </p>
+                      <p><strong>📌 Camp Details:</strong><br />
+                        <ol style="list-style-type: none">
+                          <li style="list-style-type: none">📅 4 weeks starting July 7, 2025</li>
+                          <li style="list-style-type: none">🕘 Mon-Fri 9:00 AM to 4:00 PM (drop-off 8:30-9:00 am)</li>
+                          <li style="list-style-type: none">🧒 Ages 7–13</li>
+                          <li style="list-style-type: none">📍 191 Geary Ave, Toronto, ON M6H 2C1</li>
+                          <li style="list-style-type: none">🗓 Register for 1 week, 2 weeks, or the full 4 weeks</li>
+                          <li style="list-style-type: none">🎁 Every camper receives a Freestyle Dojo White Belt and Wristband to
+                            start their martial arts journey!</li>
+                        </ol>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters row-eq-height  no-card-border"
+            style=" background-color: #f1ede1;">
+            <div class="row">
+              <div class="col-12 page-section-header">
+                <h4 style='color: #ce4b2c;'>
+                  Learn More About Our </h4>
+                <h3>
+                  Session Breakdown </h3>
+              </div>
+              <div class="col single-content-column">
+                <div class="content-block-content">
+                  <table>
+                    <tr>
+                      <th style="text-align: center;">Session 1</th>
+                      <th style="text-align: center;">Session 2</th>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link"
+                        data-site-id="103311" data-mb-site-id="5722081" data-service-id="100106"
+                        data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Register for Week 1 - July 7">
+                      </healcode-widget></td>
+                      <td style="text-align: center;"><healcode-widget data-version="0.2"
+                        data-link-class="healcode-pricing-option-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                        data-service-id="100109" data-bw-identity-site="true" data-type="pricing-link"
+                        data-inner-html="Register for Week 3 - July 21" /></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"> <healcode-widget data-version="0.2"
+                        data-link-class="healcode-pricing-option-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                        data-service-id="100107" data-bw-identity-site="true" data-type="pricing-link"
+                        data-inner-html="Register for Week 2 - July 14" /></td>
+                      <td style="text-align: center;"><healcode-widget data-version="0.2"
+                        data-link-class="healcode-pricing-option-text-link" data-site-id="103311" data-mb-site-id="5722081"
+                        data-service-id="100110" data-bw-identity-site="true" data-type="pricing-link"
+                        data-inner-html="Register for week 4 - July 28" /></td>
+                    </tr>
+                  </table>
+                  <div class="card-text" style="text-align: center;">
+                  <p>Week 2 of each session builds on skills from Week 1 while still welcoming new campers!</p>
+                  
+                  <div class="row no-gutters   no-card-border">
+                    <div class="col-lg-6 card-content-container" style=' background-color: #e8b352;'>
+                      <div class="card-content">
+                        <div class="card-text">
+                        <p><strong>Pricing:</strong></p>
+                        <p>
+                        <ol style="list-style-type: none">
+                          <li style="list-style-type: none">💲 1 Week – $300</li>
+                          <li style="list-style-type: none">💲 2 Week – $500 <i>(Save $100)</i></li>
+                          <li style="list-style-type: none">💲 4 Week – $900 <i>(Save $300)</i></li>
+                        </ol>
+                        ❗<strong>Early Bird Special:</strong> <strong>15% off</strong> if you register before <strong>May
+                          31st</strong>❗
+                        </p>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 card-content-container" style='background-color: #e8b352;'>
+                      <div class="card-content">
+                        <div class="card-text">
+                          <p><strong>Ready to register?</strong></p>
+                    <p>Hurry up and sign up today. Registration closes July 4th.</p>
+                    <p>If you would like to register for more than one week, or if you have any questions, please <a href="index.html#contact">contact us</a>,
+                      and we will process your registration.</p>
+                    <p>Let's make this summer one to remember.</p>
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 page-section-header">
+                    <h3>
+                      See you on the mats! 👊 </h3>
+                  </div>
+                  
+                  </div>
+                  
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          
           </div>
-        </section>
-
-
-
-        </section>
+        </div>
       </div>
+      </section>  
     </main>
-
-
     <footer class="wp-block-template-part">
       <div id="footer" class="site-footer alignfull has-solid-border-top"
         style="color: var(--wp--preset--color--primary-text);background-color:  var(--wp--preset--color--base);padding-top: var(--wp--preset--spacing--20); padding-bottom: var(--wp--preset--spacing--20); padding-right: var(--wp--preset--spacing--10); padding-left: var(--wp--preset--spacing--10);;border-top: 3px solid #e8b352;">
