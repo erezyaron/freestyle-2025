@@ -48,6 +48,12 @@
     <loc>https://www.freestyledojo.ca/gallery/</loc>
     <lastmod>2025-05-27</lastmod>
     <priority>0.7</priority>
+  </url>  
+  
+  <url>
+    <loc>https://www.freestyledojo.ca/schedule/book-a-class.htm</loc>
+    <lastmod>2025-05-31</lastmod>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

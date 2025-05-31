@@ -17,6 +17,12 @@
       display: none;
       pointer-events: none;
     }
+    .healcode-wrapper {
+      max-height: 600px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
   </style>
 <script type="application/ld+json">
 {
@@ -1465,6 +1471,11 @@ document.querySelector('#more-links').addEventListener('mouseleave', function() 
                     <span class="text-container">
                       Download Our Schedule </span>
                   </a>
+                  <a class="wp-element-button"
+                    href="#book-a-class">
+                    <span class="text-container">
+                      Book a Class </span>
+                  </a>
 
                 </div>
               </div>
@@ -1614,7 +1625,35 @@ document.querySelector('#more-links').addEventListener('mouseleave', function() 
 
         </section>
 
+<section class="page-section alignfull">
+                    <div class="container content-block-container"
+            style="--content-block-card-background-color: var(--wp--preset--color--base-2);">
+            <div class="row">
+              <div class="col-12 page-section-header">
+                <h3 id="book-a-class">
+                  Book a class at Freestyle Dojo</h3>
+                  <h4 style='color: #ce4b2c;'>
+                    Or simply show up at the dojo 10 minutes before a class starts </h4>
+              </div>
+              <div class="col single-content-column">
+                <div class="content-block-content">
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div id="cards">
+            <div class="container-fluid">
+              <div class="card-container">
+                <div class="row no-gutters row-eq-height  no-card-border">
+                  <div class="healcode-wrapper">
+                  <healcode-widget data-type="schedules" data-widget-partner="object" data-widget-id="381978700d7d" data-widget-version="1" ></healcode-widget>
+                 </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="webform alignfull has-solid-border-top" style="border-top: 3px solid #ce4b2c;">
 
 
