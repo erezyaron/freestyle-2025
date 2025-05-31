@@ -17,6 +17,12 @@
       display: none;
       pointer-events: none;
     }
+    .healcode-wrapper {
+      max-height: 600px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
   </style>
 <script type="application/ld+json">
 {
@@ -320,7 +326,7 @@
   <meta property="og:description"
     content="View Freestyle Dojo’s full class schedule. Find the perfect time for your Jiu Jitsu or MMA training—kids, beginners, and advanced welcome!" />
   <meta property="og:url" content="https://www.freestyledojo.ca/schedule/" />
-  <meta property="og:site_name" content="Freestyle Dojo (6460)" />
+  <meta property="og:site_name" content="Freestyle Dojo" />
   <meta property="og:updated_time" content="2025-04-02T15:44:22+00:00" />
   <meta property="og:image"
     content="https://www.freestyledojo.ca/images/Freestyle-Dojo-LogoMark-1024x1005.png" />
@@ -1321,6 +1327,11 @@ src="https://www.facebook.com/tr?id=688529794070599&ev=PageView
                 <ul id="menu-header" class="navbar-nav ml-auto has-custom-link-colors">
                   <li id="menu-item-485"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485 nav-item"><a
+                      href="memberships/register.htm" class="nav-link wp-element-button"><span
+                        class="text-container">Free Trial</span></a>
+                  </li>
+                  <li id="menu-item-485"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485 nav-item"><a
                       href="https://www.freestyledojo.ca/memberships/"
                       class="nav-link wp-element-button"><span class="text-container">Memberships</span></a></li>
                 
@@ -1521,10 +1532,7 @@ document.querySelector('#more-links').addEventListener('mouseleave', function() 
                   <div class="cta-link-container">
                     <button type="button" class="cta-button wp-element-button" style=' ;'>
                       <span class="text-container">
-                        <healcode-widget data-version="0.2"
-                          data-link-class="healcode-contract-text-link" data-site-id="103311"
-                          data-mb-site-id="5722081" data-service-id="100" data-bw-identity-site="false"
-                          data-type="contract-link" data-inner-html="Join Now" />
+                        <a href="../memberships/register.htm">Free Trial</a>
                       </span>
                 </button>
                   </div>
@@ -1559,16 +1567,9 @@ document.querySelector('#more-links').addEventListener('mouseleave', function() 
 
         <section class="page-section page-section-content-cards alignfull"
           style="color: var(--wp--preset--color--primary-text);padding-top: var(--wp--preset--spacing--10); padding-bottom: var(--wp--preset--spacing--20);;">
-
-
-          <div class="container">
-          </div>
           <div id="cards">
             <div class="container-fluid">
-
               <div class="card-container">
-
-
                 <div class="row no-gutters row-eq-height  no-card-border">
                   <div class="col-lg-6 card-image-container">
                     <div class="card-image">
@@ -1609,6 +1610,35 @@ document.querySelector('#more-links').addEventListener('mouseleave', function() 
 
         </section>
 
+        <section class="page-section alignfull">
+                    <div class="container content-block-container"
+            style="--content-block-card-background-color: var(--wp--preset--color--base-2);">
+            <div class="row">
+              <div class="col-12 page-section-header">
+                <h3>
+                  Book a class at Freestyle Dojo</h3>
+                  <h4 style='color: #ce4b2c;'>
+                    Or simply show up at the dojo 10 minutes before a class starts </h4>
+              </div>
+              <div class="col single-content-column">
+                <div class="content-block-content">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cards">
+            <div class="container-fluid">
+              <div class="card-container">
+                <div class="row no-gutters row-eq-height  no-card-border">
+                  <div class="healcode-wrapper">
+                  <healcode-widget data-type="schedules" data-widget-partner="object" data-widget-id="381978700d7d" data-widget-version="1" ></healcode-widget>
+                 </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section class="webform alignfull has-solid-border-top" style="border-top: 3px solid #ce4b2c;">
 
