@@ -825,6 +825,18 @@
 
 
   <style>
+        .contact-form-field {
+      box-sizing: border-box;
+      margin-bottom: 0.5rem;
+      height: 35px;
+      width: 100%;
+      border: 1px solid #d5d9de;
+      font-weight: 400;
+      color: #696c74;
+      border-radius: 0.25rem;
+      font-style: normal;
+    }
+
     .editor-styles-wrapper .is-root-container .wp-element-button,
     .editor-styles-wrapper .is-root-container .wp-element-button:not(:disabled):not(.disabled),
     .editor-styles-wrapper .wp-element-button:not(:disabled):not(.disabled),
@@ -1347,21 +1359,16 @@
                 </div>
               </div>
 
-              <div class="col-lg-6 webform-content-container"
+             <div class="col-lg-6 webform-content-container"
                 style="color: var(--wp--preset--color--primary-text);background-color:  var(--wp--preset--color--base);">
-
-
                 <div class="webform-location-info"
-                  style="padding-top: var(--wp--preset--spacing--20); padding-bottom: var(--wp--preset--spacing--20); padding-right: var(--wp--preset--spacing--10); padding-left: var(--wp--preset--spacing--10);;">
-                  <div class="page-section-header">
+                  style="padding-top: var(--wp--preset--spacing--20); padding-bottom: var(--wp--preset--spacing--20); padding-right: var(--wp--preset--spacing--10); padding-left: var(--wp--preset--spacing--10);">
+                  <div class="page-section-header" id="contact-us">
                     <h2>Contact Us Today!</h2>
                     <p>Freestyle Dojo welcomes everyone in the Greater Toronto Area (GTA) and those near us in
-                      Scarborough, North York, Etobicoke, and Mississauga. We are either a 5-minute bus ride or
+                      Scarborough, North York, Etobicoke, and Mississauga. We are a 5-minute bus ride or
                       15-minute walk North of Dufferin Station.</p>
                   </div>
-
-
-
                   <div class="webform-location-forms" style="--webform-form-container-height: 550px;">
                     <div class="webform-loading-screen disabled" style="--webform-form-container-height: 550px;">
                       <div class="lead-capture-loader"></div>
@@ -1371,7 +1378,7 @@
 
                       <div class="location-info location-number FreestyleDojo">
                         <div class="location-icon">
-                          <i class="fa fa-phone fa- " style="color: "></i>
+                          <i class="fa fa-phone fa- "></i>
                         </div>
                         <div class="location-text">
                           647-245-8829 </div>
@@ -1382,15 +1389,55 @@
 
                       <div class="location-info location-address FreestyleDojo">
                         <div class="location-icon">
-                          <i class="fa fa-map-marker fa- " style="color: "></i>
+                          <i class="fa fa-map-marker fa- "></i>
                         </div>
                         <div class="location-text">
                           191 Geary Ave, Toronto, ON M6H2C1 </div>
                       </div>
 
                       <div class="website-form-container">
-                        <healcode-widget data-type="prospects" data-widget-partner="object" data-widget-id="38566770d7d"
-                          data-widget-version="0"></healcode-widget>
+                        <form id="contact-form" onSubmit=sendEmail>
+                          <div>
+                            <input class="contact-form-field" type="text" name="name" placeholder="Full Name" required />
+                          </div>
+                          <div>
+                            <input class="contact-form-field" type="email" name="email" placeholder="Email Address" required />
+                          </div>
+                          <div>
+                            <input class="contact-form-field" type="tel" name="phone" placeholder="Phone Number" required />
+                          </div>
+                          <div>
+                            <select class="contact-form-field" name="referral" value="">
+                              <option value="">Where did you hear about us?</option>
+                              <option value="friends_and_family">Friends and Family</option>
+                              <option value="flyer">Flyer</option>
+                              <option value="Google">Google</option>
+                              <option value="Geary">Geary Street / Festivals</option>
+                              <option value="Social Media">Social Media</option>
+                              <option value="Other">Other</option>
+                            </select>
+                          </div>
+                          <div>
+                            <select class="contact-form-field" name="interest" value="">
+                              <option value="">Select Interest</option>
+                              <option value="jiu_jitsu">Jiu Jitsu</option>
+                              <option value="fitness">Fitness</option>
+                              <option value="kids">Kids Programs</option>
+                              <option value="general">General Inquiry</option>
+                              <option value="gym rental">Gym Rental</option>
+                            </select>
+                          </div>
+                          <div>
+                            <textarea class="contact-form-field" style="height: 200px;" name="message" placeholder="Any details you would like to share with our team!"
+                            required></textarea>
+                          </div>
+                          <div>
+                            <button style="color: white; border: none; padding: 0.6rem 1.2rem; background-color: #509595; font-size: 1rem; line-height: 1.5rem; font-weight: 700; border-radius: 0.3rem;" type="submit" id="frmSubmit">Send</button>
+                          </div>
+                          <div>
+                            <p id="emailMessage"></p>
+                          </div>
+                        </form>
                       </div>
 
                     </div>
