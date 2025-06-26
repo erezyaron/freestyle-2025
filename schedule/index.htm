@@ -1506,7 +1506,7 @@
               </div>
               <div class="col single-content-column">
                 <div class="content-block-content">
-                  <p><img fetchpriority="high" decoding="async" class="aligncenter wp-image-7799 size-full"
+                  <p><img id="schedule-img" fetchpriority="high" decoding="async" class="aligncenter wp-image-7799 size-full"
                       src="https://www.freestyledojo.ca/images/Freestyle-Dojo-Class-Schedule.png"
                       alt="Freestyle Dojo Full Class Schedule Jiu Jitsu and MMA training in Toronto" width="2000"
                       height="1160"
@@ -1517,7 +1517,19 @@
             </div>
           </div>
         </section>
-
+<script>
+  (function () {
+    const now=new Date();
+    const switchDate = new Date("2025-07-01T00:00:00");
+    const isJuly = now >= switchDate;
+    const img = document.getElementById("schedule-img");
+    if(!img)return;
+    if(isJuly){
+      img.src = "/images/Freestyle-Schedule.png";
+      img.srcset = "/images/Freesytyle-Schedule-2000.png 2000w, /images/Freesytyle-Schedule-1724.png 1724w, /images/Freesytyle-Schedule-1536.png 1536w, /images/Freesytyle-Schedule-1293.png 1293w, /images/Freesytyle-Schedule-1024.png 1024w, /images/Freesytyle-Schedule-768.png 768w, /images/Freesytyle-Schedule-603.png 603w, /images/Freesytyle-Schedule-300.png 300w";
+    }
+  })();
+</script>
 
         <section class="page-section cta alignfull" style=";">
 
