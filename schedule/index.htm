@@ -1775,6 +1775,9 @@
                             emailjs.sendForm('freestyle-dojo', 'freestyle-website', this)
                               .then(function () {
                                 console.log('SUCCESS!');
+                                gtag('event', 'contact_us_email', {
+                                  'page': 'schedule'
+                                });
                                 document.getElementById('frmSubmit').disabled = false;
                                 document.getElementById('emailMessage').textContent = "Thank you, our team will respond soon.";
                               }, function (error) {
