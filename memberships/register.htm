@@ -823,6 +823,7 @@
     id="strength-bootstrap-5-js-min-map-js"></script>
   <script src="https://kit.fontawesome.com/1eb314482a.js" id="font-awesome-kit-js"></script>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <style>
         .contact-form-field {
@@ -951,6 +952,10 @@
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '688529794070599');
     fbq('track', 'PageView');
+            (function () {
+      emailjs.init('4hpTXKnreapaoCq0W');
+    })();
+
   </script>
   <noscript>
     <img height="1" width="1" src="https://www.facebook.com/tr?id=688529794070599&ev=PageView
@@ -1396,7 +1401,7 @@
                       </div>
 
                       <div class="website-form-container">
-                        <form id="contact-form" onSubmit=sendEmail>
+                        <form id="contact-form">
                           <div>
                             <input class="contact-form-field" type="text" name="name" placeholder="Full Name" required />
                           </div>
@@ -1439,6 +1444,23 @@
                           </div>
                         </form>
                       </div>
+<script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById('frmSubmit').disabled = true;
+        emailjs.sendForm('freestyle-dojo', 'freestyle-website', this)
+          .then(function () {
+            console.log('SUCCESS!');
+            document.getElementById('frmSubmit').disabled = false;
+            document.getElementById('emailMessage').textContent = "Thank you, our team will respond soon.";
+          }, function (error) {
+            console.log('FAILED...', error);
+            document.getElementById('emailMessage').textContent = "Sorry, there was an error. Please email info@freestyledojo.ca directly for assistance.";
+          });
+      });
+    }
+  </script>
 
                     </div>
                   </div>

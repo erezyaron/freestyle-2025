@@ -1112,6 +1112,7 @@
   <script src="https://www.freestyledojo.ca/themes/bootstrap.bundle.min.js.map?ver=6.7.2"
     id="strength-bootstrap-5-js-min-map-js"></script>
   <script src="https://kit.fontawesome.com/1eb314482a.js" id="font-awesome-kit-js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
   <style>
@@ -1229,6 +1230,10 @@
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '688529794070599');
     fbq('track', 'PageView');
+    (function () {
+      emailjs.init('4hpTXKnreapaoCq0W');
+    })();
+
   </script>
   <noscript>
     <img height="1" width="1" src="https://www.facebook.com/tr?id=688529794070599&ev=PageView
@@ -1714,7 +1719,7 @@
                       </div>
 
                       <div class="website-form-container">
-                        <form id="contact-form" onSubmit=sendEmail>
+                        <form id="contact-form">
                           <div>
                             <input class="contact-form-field" type="text" name="name" placeholder="Full Name"
                               required />
@@ -1762,6 +1767,23 @@
                           </div>
                         </form>
                       </div>
+                      <script type="text/javascript">
+                        window.onload = function () {
+                          document.getElementById('contact-form').addEventListener('submit', function (event) {
+                            event.preventDefault();
+                            document.getElementById('frmSubmit').disabled = true;
+                            emailjs.sendForm('freestyle-dojo', 'freestyle-website', this)
+                              .then(function () {
+                                console.log('SUCCESS!');
+                                document.getElementById('frmSubmit').disabled = false;
+                                document.getElementById('emailMessage').textContent = "Thank you, our team will respond soon.";
+                              }, function (error) {
+                                console.log('FAILED...', error);
+                                document.getElementById('emailMessage').textContent = "Sorry, there was an error. Please email info@freestyledojo.ca directly for assistance.";
+                              });
+                          });
+                        }
+                      </script>
 
                     </div>
                   </div>
@@ -1878,44 +1900,44 @@
   </div>
 
   <script id="wp-block-template-skip-link-js-after">
-    (function () {
-      var skipLinkTarget = document.querySelector('main'),
-        sibling,
-        skipLinkTargetID,
-        skipLink;
+      (function () {
+        var skipLinkTarget = document.querySelector('main'),
+          sibling,
+          skipLinkTargetID,
+          skipLink;
 
-      // Early exit if a skip-link target can't be located.
-      if (!skipLinkTarget) {
-        return;
-      }
+        // Early exit if a skip-link target can't be located.
+        if (!skipLinkTarget) {
+          return;
+        }
 
-      /*
-       * Get the site wrapper.
-       * The skip-link will be injected in the beginning of it.
-       */
-      sibling = document.querySelector('.wp-site-blocks');
+        /*
+         * Get the site wrapper.
+         * The skip-link will be injected in the beginning of it.
+         */
+        sibling = document.querySelector('.wp-site-blocks');
 
-      // Early exit if the root element was not found.
-      if (!sibling) {
-        return;
-      }
+        // Early exit if the root element was not found.
+        if (!sibling) {
+          return;
+        }
 
-      // Get the skip-link target's ID, and generate one if it doesn't exist.
-      skipLinkTargetID = skipLinkTarget.id;
-      if (!skipLinkTargetID) {
-        skipLinkTargetID = 'wp--skip-link--target';
-        skipLinkTarget.id = skipLinkTargetID;
-      }
+        // Get the skip-link target's ID, and generate one if it doesn't exist.
+        skipLinkTargetID = skipLinkTarget.id;
+        if (!skipLinkTargetID) {
+          skipLinkTargetID = 'wp--skip-link--target';
+          skipLinkTarget.id = skipLinkTargetID;
+        }
 
-      // Create the skip link.
-      skipLink = document.createElement('a');
-      skipLink.classList.add('skip-link', 'screen-reader-text');
-      skipLink.href = '#' + skipLinkTargetID;
-      skipLink.innerHTML = 'Skip to content';
+        // Create the skip link.
+        skipLink = document.createElement('a');
+        skipLink.classList.add('skip-link', 'screen-reader-text');
+        skipLink.href = '#' + skipLinkTargetID;
+        skipLink.innerHTML = 'Skip to content';
 
-      // Inject the skip link.
-      sibling.parentElement.insertBefore(skipLink, sibling);
-    }());
+        // Inject the skip link.
+        sibling.parentElement.insertBefore(skipLink, sibling);
+      }());
 
   </script>
   <script src="https://www.freestyledojo.ca/themes/index.min.js?ver=2.1.4" id="script-main-js"></script>
