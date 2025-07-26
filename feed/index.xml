@@ -9,10 +9,10 @@
 
 <channel>
 	<title>Freestyle Dojo</title>
-	<atom:link href="https://erezyaron.github.io/freestyle-2025/feed/" rel="self" type="application/rss+xml" />
-	<link>https://erezyaron.github.io/freestyle-2025/</link>
+	<atom:link href="https://www.freestyledojo.ca/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.freestyledojo.ca/</link>
 	<description>Professional Jiu Jitsu gym with expert trainers</description>
-	<lastBuildDate>Wed, 02 Apr 2025 16:57:13 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 26 Jul 2025 16:57:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.7.2</generator>
 
 <image>
-	<url>https://erezyaron.github.io/freestyle-2025/images/cropped-Freestyle-Dojo-LogoMark-32x32.png</url>
+	<url>https://www.freestyledojo.ca/images/cropped-Freestyle-Dojo-LogoMark-32x32.png</url>
 	<title>Freestyle Dojo</title>
-	<link>https://erezyaron.github.io/freestyle-2025/</link>
+	<link>https://www.freestyledojo.ca/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
