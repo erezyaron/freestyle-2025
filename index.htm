@@ -896,6 +896,96 @@
       margin-top: 10px;
     }
   </style>
+  <style>
+/* --- Seminar Pop-up Styles --- */
+.modal-overlay {
+  /* ... (keep existing styles) ... */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center; 
+  /* Crucial: Allows the entire overlay to scroll if the modal is still too tall */
+  overflow-y: auto; 
+}
+
+.modal-content {
+  /* ... (keep existing styles) ... */
+  background-color: #f1ede1;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  
+  /* NEW: Constraints for mobile and long content */
+  max-height: 90vh; /* Ensures the modal is never taller than 90% of the screen height */
+  overflow-y: auto; /* Adds a scrollbar *inside* the content box if needed */
+  
+  /* Important for vertical spacing on mobile */
+  margin: 20px 0; 
+}
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  /* Uses your site's primary text color */
+  color: #141e26; 
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10001;
+}
+
+.modal-close-btn:hover {
+  /* Uses your site's contrast color for hover */
+  color: #ce4b2c; 
+}
+
+.modal-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px auto 20px auto;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 480px) {
+  .modal-image {
+    max-width: 250px;
+  }
+}
+
+.modal-heading {
+  /* Uses your site's brand color */
+  color: #509595; 
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.modal-text {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.modal-signup-btn {
+  /* Inherits button styling from your site (.wp-element-button) */
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+</style>
   <style id='wp-block-template-skip-link-inline-css'>
     .skip-link.screen-reader-text {
       border: 0;
@@ -2893,6 +2983,71 @@
     </script>
     <script src="https://www.freestyledojo.ca/themes/index.min.js?ver=2.1.4" id="script-main-js"></script>
     <script src="https://www.freestyledojo.ca/themes/index.min.js.map?ver=2.1.4" id="script-main-map-js"></script>
+<div id="seminar-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close-btn">&times;</button>
+    <div class="modal-body">
+      <h2 class="modal-heading">Upcoming Seminar: Kieran Kichuk!</h2>
+      <img id="seminar-image" src="./images/KieranKichukSeminar.jpeg" alt="Upcoming Seminar" class="modal-image">     
+      <p class="modal-text">Kieran is one of Canadas top competitors and Jiu Jitsu technicians. <br/>
+        In this seminar you will learn details that are the difference between pretty good and world class technique.<br/> 
+        Don't miss out on this chance to level up and celebrate 4 years of Freestyle Dojo!</p>
+      <p class="modal-text">
+        12-2pm rolls<br/>
+        2-3pm promotions and rolls<br/>
+        5-8pm party at blood Brothers<br/>
+      </p>
+      <span class="modal-signup-btn wp-element-button"><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="103311" 
+                        data-mb-site-id="5722081" data-service-id="100160" data-bw-identity-site="true" data-type="pricing-link" 
+                        data-inner-html="Sign Up Now" />
+                        </span>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById('seminar-modal');
+    const closeBtn = document.querySelector('.modal-close-btn');
+
+    // 1. Define the end date and time for the pop-up (Jan 18, 2026, 12:00 PM EST)
+    // NOTE: JavaScript Date object uses 0-indexed months (0=Jan, 11=Dec). 
+    // We use 'America/New_York' for EST/EDT.
+    const seminarEndDate = new Date('January 18, 2026 12:00:00');
+    const now = new Date();
+
+    // 2. Check if the current time is before the deadline
+    // The pop-up will show up every time until the seminarEndDate is reached.
+    if (now < seminarEndDate) {
+      // Show the modal after a 1 second delay
+      setTimeout(() => {
+        modal.style.display = 'flex';
+      }, 1000); 
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // Event listeners to close the modal
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close when the user clicks anywhere on the dark overlay
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close when the 'Escape' key is pressed
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
