@@ -75,7 +75,7 @@
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Saturday",
       "opens": "11:00",
-      "closes": "14:30"
+      "closes": "15:00"
     }
   ],
   "telephone": "+1-647-245-8829",
@@ -146,7 +146,7 @@
       "eventSchedule": {
         "@type": "Schedule",
         "repeatFrequency": "P1W",
-        "byDay": ["MO", "WE", "FR"],
+        "byDay": ["MO", "FR"],
         "startTime": "11:15",
         "endTime": "12:00",
         "scheduleTimezone": "America/Toronto"
@@ -158,8 +158,8 @@
     },
     {
       "@type": "Event",
-      "name": "Kids Jiu Jitsu – Ages 5–8",
-      "description": "Fun, safe, and engaging Jiu Jitsu classes for kids aged 5 to 8 years old.",
+      "name": "Kids Jiu Jitsu – Ages 4–8",
+      "description": "Fun, safe, and engaging Jiu Jitsu classes for kids aged 4 to 8 years old.",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "startDate": "2025-05-01T16:00",
@@ -178,20 +178,21 @@
       "image": ["https://www.freestyledojo.ca/images/Freestyle-Dojo-13.jpg"],
       "eventSchedule": {
         "@type": "Schedule",
-        "repeatFrequency": "P1D",
+        "repeatFrequency": "P1W",
+        "byDay": ["MO", "WE", "FR"],
         "startTime": "16:00",
         "endTime": "16:45",
         "scheduleTimezone": "America/Toronto"
       },
       "audience": {
         "@type": "EducationalAudience",
-        "audienceType": "Children ages 5–8"
+        "audienceType": "Children ages 4–8"
       }
     },
     {
       "@type": "Event",
-      "name": "Kids Jiu Jitsu – Ages 9–11",
-      "description": "Structured martial arts training for kids aged 9 to 11, focused on skill and discipline.",
+      "name": "Kids Jiu Jitsu – Ages 9–12",
+      "description": "Structured martial arts training for kids aged 9 to 12, focused on skill and discipline.",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "startDate": "2025-05-01T16:45",
@@ -210,20 +211,54 @@
       "image": ["https://www.freestyledojo.ca/images/Freestyle-Dojo-15.jpg"],
       "eventSchedule": {
         "@type": "Schedule",
-        "repeatFrequency": "P1D",
+        "repeatFrequency": "P1W",
+        "byDay": ["MO", "WE", "FR"],
         "startTime": "16:45",
         "endTime": "17:45",
         "scheduleTimezone": "America/Toronto"
       },
       "audience": {
         "@type": "EducationalAudience",
-        "audienceType": "Children ages 9–11"
+        "audienceType": "Children ages 9–12"
       }
     },
     {
       "@type": "Event",
-      "name": "Adult Evening Jiu Jitsu",
-      "description": "Evening Jiu Jitsu training for adults of all experience levels, Monday through Sunday.",
+      "name": "Kids Kickboxing – Ages 9–12",
+      "description": "Structured martial arts training for kids aged 9 to 12, focused on skill and discipline.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "startDate": "2026-01-01T16:45",
+      "location": {
+        "@type": "Place",
+        "name": "Freestyle Dojo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "191 Geary Ave",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "postalCode": "M6H 2C1",
+          "addressCountry": "CA"
+        }
+      },
+      "image": ["https://www.freestyledojo.ca/images/Freestyle-Dojo-15.jpg"],
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["TU", "TH"],
+        "startTime": "16:45",
+        "endTime": "17:45",
+        "scheduleTimezone": "America/Toronto"
+      },
+      "audience": {
+        "@type": "EducationalAudience",
+        "audienceType": "Children ages 9–12"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Adult Fundamentals Evening Jiu Jitsu",
+      "description": "Evening Fundamentals Jiu Jitsu training for adults, Monday through Thursday.",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "startDate": "2025-05-01T18:00",
@@ -242,7 +277,8 @@
       "image": ["https://www.freestyledojo.ca/images/Freestyle-Dojo-29.jpg"],
       "eventSchedule": {
         "@type": "Schedule",
-        "repeatFrequency": "P1D",
+        "repeatFrequency": "P1W",
+        "byDay": ["MO", "TU", "WE", "TH"],
         "startTime": "18:00",
         "endTime": "19:30",
         "scheduleTimezone": "America/Toronto"
@@ -255,7 +291,7 @@
     {
       "@type": "Event",
       "name": "Advanced Adult Training",
-      "description": "Extended evening training session for advanced adults, Monday through Thursday.",
+      "description": "Extended evening training session for advanced adults.",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "startDate": "2025-05-01T19:30",
@@ -275,9 +311,141 @@
       "eventSchedule": {
         "@type": "Schedule",
         "repeatFrequency": "P1W",
-        "byDay": ["MO", "TU", "WE", "TH"],
+        "byDay": ["WE"],
         "startTime": "19:30",
         "endTime": "21:00",
+        "scheduleTimezone": "America/Toronto"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Adults"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Pro/Comp Training",
+      "description": "Extended evening training session for advanced adults, focued on competition and professional training.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "startDate": "2025-05-01T19:30",
+      "location": {
+        "@type": "Place",
+        "name": "Freestyle Dojo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "191 Geary Ave",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "postalCode": "M6H 2C1",
+          "addressCountry": "CA"
+        }
+      },
+      "image": ["https://www.freestyledojo.ca/gallery/class-1.jpeg"],
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["MO"],
+        "startTime": "19:30",
+        "endTime": "21:00",
+        "scheduleTimezone": "America/Toronto"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Adults"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Takedowns",
+      "description": "Extended evening training session for advanced adults, focused on takedown techniques.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "startDate": "2025-05-01T19:30",
+      "location": {
+        "@type": "Place",
+        "name": "Freestyle Dojo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "191 Geary Ave",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "postalCode": "M6H 2C1",
+          "addressCountry": "CA"
+        }
+      },
+      "image": ["https://www.freestyledojo.ca/gallery/class-1.jpeg"],
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["TU"],
+        "startTime": "19:30",
+        "endTime": "21:00",
+        "scheduleTimezone": "America/Toronto"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Adults"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "All-Levels Adult Training",
+      "description": "Evening training session for all-levels adults.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "startDate": "2025-05-01T19:30",
+      "location": {
+        "@type": "Place",
+        "name": "Freestyle Dojo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "191 Geary Ave",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "postalCode": "M6H 2C1",
+          "addressCountry": "CA"
+        }
+      },
+      "image": ["https://www.freestyledojo.ca/gallery/class-1.jpeg"],
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["FR"],
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "scheduleTimezone": "America/Toronto"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Adults"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Adult Kickboxing",
+      "description": "Evening kickboxing training session for adults.",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "startDate": "2025-05-01T19:30",
+      "location": {
+        "@type": "Place",
+        "name": "Freestyle Dojo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "191 Geary Ave",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "postalCode": "M6H 2C1",
+          "addressCountry": "CA"
+        }
+      },
+      "image": ["https://www.freestyledojo.ca/gallery/class-1.jpeg"],
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": ["TU", "TH"],
+        "startTime": "18:00",
+        "endTime": "19:30",
         "scheduleTimezone": "America/Toronto"
       },
       "audience": {
