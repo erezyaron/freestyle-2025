@@ -2987,19 +2987,26 @@
   <div class="modal-content">
     <button class="modal-close-btn">&times;</button>
     <div class="modal-body">
-      <h2 class="modal-heading">Upcoming Seminar: Kieran Kichuk!</h2>
-      <img id="seminar-image" src="./images/KieranKichukSeminar.jpeg" alt="Upcoming Seminar" class="modal-image">     
-      <p class="modal-text">Kieran is one of Canada's top competitors and Jiu Jitsu technicians. <br/>
-        In this seminar you will learn details that are the difference between pretty good and world class technique.<br/> 
-        Don't miss out on this chance to level up and celebrate 4 years of Freestyle Dojo!</p>
+      <h2 class="modal-heading">Ultimate March Break Camp!</h2>
+      <!-- <img id="seminar-image" src="./images/March-Break-Deal.jpeg" alt="Ultimate March Break Camp" class="modal-image">      -->
+      <p class="modal-text">Starting March 16-20, 2026 <br/>
+        Monday - Friday 9:00AM to 4:00PM (drop-off 8:30-9AM)<br/> 
+        Ages 7-13</p>
       <p class="modal-text">
-        12-2pm Seminar<br/>
-        2-3pm Promotions and Rolls<br/>
-        5-8pm Party at Blood Brothers<br/>
+        191 Geary Ave, Toronto, ON M6H2C1<br/>
+        Every camper receives a FREE training kit, Freestyl Dojo White Belt, <br/>
+        and Wristband to start their martial arts journey!<br/>
       </p>
-      <span class="modal-signup-btn wp-element-button"><healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="103311" 
+      <p class="modal-text">
+        Prices:<br/>
+        1 Week - $399+tax<br/>
+        Extra training kit - $59+tax<br/>
+      </p>
+      <span class="modal-signup-btn wp-element-button">
+        <a href="./summer-camp/index.htm">SIGN UP NOW</a>
+        <!-- <healcode-widget data-version="0.2" data-link-class="healcode-pricing-option-text-link" data-site-id="103311" 
                         data-mb-site-id="5722081" data-service-id="100160" data-bw-identity-site="true" data-type="pricing-link" 
-                        data-inner-html="Sign Up Now" />
+                        data-inner-html="Sign Up Now" /> -->
                         </span>
     </div>
   </div>
@@ -3010,10 +3017,10 @@
     const modal = document.getElementById('seminar-modal');
     const closeBtn = document.querySelector('.modal-close-btn');
 
-    // 1. Define the end date and time for the pop-up (Jan 18, 2026, 12:00 PM EST)
+    // 1. Define the end date and time for the pop-up (March 20, 2026, 12:00 PM EST)
     // NOTE: JavaScript Date object uses 0-indexed months (0=Jan, 11=Dec). 
     // We use 'America/New_York' for EST/EDT.
-    const seminarEndDate = new Date('January 18, 2026 12:00:00');
+    const seminarEndDate = new Date('March 20, 2026 12:00:00');
     const now = new Date();
 
     // 2. Check if the current time is before the deadline
