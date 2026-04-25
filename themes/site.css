@@ -466,6 +466,120 @@ footer a:hover { color: var(--teal); }
   opacity: 0.4;
 }
 
+/* ── SCHEDULE TABLE ── */
+.schedule-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 5px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.10);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  background: #fff;
+}
+
+.schedule-table thead th {
+  background: var(--dark);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+}
+
+.schedule-table thead th:first-child {
+  width: 110px;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.schedule-table td {
+  padding: 0.55rem 0.4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  vertical-align: top;
+  text-align: center;
+}
+
+.schedule-table tr:last-child td { border-bottom: none; }
+
+.schedule-table tr:nth-child(even) td { background: #fafafa; }
+
+.sched-time {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #777;
+  text-align: left;
+  padding-left: 1rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Class pills */
+.cls {
+  display: inline-block;
+  margin: 2px auto;
+  padding: 0.28rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: center;
+  width: 100%;
+  max-width: 130px;
+  box-sizing: border-box;
+}
+
+.cls small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.7rem;
+  opacity: 0.82;
+  margin-top: 1px;
+}
+
+.cls.adult    { background: rgba(80,149,149,0.14); color: #356060; }
+.cls.kids     { background: rgba(232,179,82,0.22); color: #7a5410; }
+.cls.fitness  { background: rgba(206,75,44,0.13);  color: #8c2e18; }
+.cls.advanced { background: rgba(20,30,38,0.09);   color: var(--dark); }
+.cls.openmat  {
+  background: transparent;
+  color: var(--teal);
+  border: 1.5px dashed var(--teal);
+}
+
+/* Legend */
+.schedule-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.schedule-legend .cls {
+  width: auto;
+  max-width: none;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.75rem;
+}
+
+.scroll-hint {
+  display: none;
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .scroll-hint { display: block; }
+}
+
 /* ── CONTACT FORM ── */
 .contact-info-heading {
   font-family: 'Boogaloo', sans-serif;

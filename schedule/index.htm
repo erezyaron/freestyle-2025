@@ -98,26 +98,114 @@
     <p>Kids &amp; Adult Jiu Jitsu · Toronto, ON</p>
   </header>
 
-  <!-- ── SCHEDULE IMAGE ── -->
+  <!-- ── SCHEDULE TABLE ── -->
   <section class="schedule-section">
-    <img
-      src="../images/Freestyle-Schedule.png"
-      srcset="../images/Freestyle-Schedule-300.png 300w,
-              ../images/Freestyle-Schedule-768.png 768w,
-              ../images/Freestyle-Schedule-1024.png 1024w,
-              ../images/Freestyle-Schedule-1293.png 1293w,
-              ../images/Freestyle-Schedule-1536.png 1536w,
-              ../images/Freestyle-Schedule-2000.png 2000w"
-      sizes="(max-width: 600px) 95vw, (max-width: 1000px) 90vw, 900px"
-      alt="Freestyle Dojo class schedule"
-      width="2000">
 
-    <!-- PDF download -->
-    <p style="margin-top:1.5rem;">
-      <a href="Freestyle-Dojo-Schedule.pdf" class="btn-teal" download>
-        <i class="fas fa-download" style="margin-right:0.4rem;"></i>Download PDF Schedule
-      </a>
-    </p>
+    <p class="scroll-hint"><i class="fas fa-arrows-left-right"></i> Scroll to see full schedule</p>
+
+    <div class="schedule-table-wrap">
+      <table class="schedule-table" aria-label="Freestyle Dojo class schedule">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+            <th scope="col">Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="sched-time">7:15–8:15 am</td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="sched-time">11:00 am–12 pm</td>
+            <td><span class="cls fitness">Bootcamp<small>45 min</small></span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><span class="cls fitness">Bootcamp<small>45 min</small></span></td>
+            <td><span class="cls kids">Parent & Child</span></td>
+          </tr>
+
+          <tr>
+            <td class="sched-time">12–1:30 pm</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+          </tr>
+
+          <tr>
+            <td class="sched-time">4–4:45 pm</td>
+            <td><span class="cls kids">Kids BJJ<small>Ages 4-8</small></span></td>
+            <td></span></td>
+            <td><span class="cls kids">Kids BJJ<small>Ages 4-8</small></span></td>
+            <td></span></td>
+            <td><span class="cls kids">Kids BJJ<small>Ages 4-8</small></span></td>
+            <td><span class="cls fitness">Kickboxing<br/>1:30–3 pm</small></span></td>
+          </tr>
+
+          <tr>
+            <td class="sched-time">4:45–5:45 pm</td>
+            <td><span class="cls kids">Kids BJJ<small>Ages 9–12</small></span></td>
+            <td><span class="cls fitness">Kids Boxing<small>Ages 9–12</small></span></td>
+            <td><span class="cls kids">Kids BJJ<small>Ages 9–12</small></span></td>
+            <td><span class="cls fitness">Kids Boxing<small>Ages 9–12</small></span></td>
+            <td><span class="cls kids">Kids BJJ<small>Ages 9–12</small></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="sched-time">6–7:30 pm</td>
+            <td><span class="cls adult">Fundamentals BJJ</span></td>
+            <td>
+              <span class="cls adult">Fundamentals BJJ</span>
+              <span class="cls fitness">Kickboxing</span>
+            </td>
+            <td><span class="cls adult">Fundamentals BJJ</span></td>
+            <td>
+              <span class="cls adult">Fundamentals BJJ</span>
+              <span class="cls fitness">Kickboxing</span>
+            </td>
+            <td><span class="cls adult">All Levels BJJ</span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="sched-time">7–9 pm</td>
+            <td><span class="cls advanced">Advanced BJJ</span></td>
+            <td><span class="cls advanced">Advanced BJJ</span></td>
+            <td><span class="cls advanced">Advanced BJJ</span></td>
+            <td><span class="cls openmat">Open Mat</span></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Legend -->
+    <div class="schedule-legend" aria-label="Schedule colour legend">
+      <span class="cls adult">Adult BJJ</span>
+      <span class="cls kids">Kids Programs</span>
+      <span class="cls fitness">Fitness &amp; Boxing</span>
+      <span class="cls advanced">Advanced / Specialty</span>
+      <span class="cls openmat">Open Mat</span>
+    </div>
 
     <!-- CTA strip -->
     <div class="cta-strip">
@@ -125,6 +213,7 @@
       <p>Book your first class — no experience required.</p>
       <a class="btn-teal" href="/contact/">Contact Us</a>
     </div>
+
   </section>
 
   <!-- ── FOOTER ── -->
