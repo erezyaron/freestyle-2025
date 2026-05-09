@@ -546,6 +546,8 @@ footer a:hover { color: var(--teal); }
 .cls.kids     { background: rgba(232,179,82,0.22); color: #7a5410; }
 .cls.fitness  { background: rgba(206,75,44,0.13);  color: #8c2e18; }
 .cls.advanced { background: rgba(20,30,38,0.09);   color: var(--dark); }
+.cls.gi       { background: rgba(65,105,225,0.14); color: #2a4599; }
+.cls.nogi     { background: rgba(138,43,226,0.14); color: #5a1b8f; }
 .cls.openmat  {
   background: transparent;
   color: var(--teal);
