@@ -92,6 +92,21 @@
     </div>
   </nav>
 
+  <!-- ── HOLIDAY BANNER ── -->
+  <div id="holiday-banner" style="position:fixed;top:61px;left:0;right:0;z-index:999;background:#b94a48;color:#fff;text-align:center;padding:0.75rem 1rem;font-size:1rem;font-weight:600;letter-spacing:0.02em;">
+    We are closed Monday, May 18 for the long weekend holiday. See you Tuesday!
+  </div>
+  <div id="holiday-banner-spacer" style="height:3rem;"></div>
+  <script>
+    (function(){
+      var cutoff = new Date('2026-05-19T00:00:00');
+      if (new Date() >= cutoff) {
+        document.getElementById('holiday-banner').style.display = 'none';
+        document.getElementById('holiday-banner-spacer').style.display = 'none';
+      }
+    })();
+  </script>
+
   <!-- ── PAGE HERO ── -->
   <header class="page-hero">
     <h1>Class Schedule</h1>
