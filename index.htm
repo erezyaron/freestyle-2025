@@ -124,9 +124,20 @@
       <p>Toronto's community dojo for kids and adults</p>
       <a class="btn-teal lg" href="schedule/">View Schedule</a>
 
-      <h1 style="margin-top: 3rem;">Darson Hemmings<br>Seminar</h1>
-      <p>Join us Sunday, September 27 for a seminar with Darson Hemmings</p>
-      <healcode-widget data-version="0.2" data-link-class="btn-teal lg" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100163" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now" />
+      <div id="seminar-promo">
+        <h1 style="margin-top: 3rem;">Darson Hemmings<br>Seminar</h1>
+        <p>Join us Sunday, September 27 for a seminar with Darson Hemmings</p>
+        <healcode-widget data-version="0.2" data-link-class="btn-teal lg" data-site-id="103311" data-mb-site-id="5722081" data-service-id="100163" data-bw-identity-site="true" data-type="pricing-link" data-inner-html="Buy Now"></healcode-widget>
+      </div>
+      <script>
+        (function(){
+          // 5pm Toronto time (EDT) on the seminar day
+          var cutoff = new Date('2026-09-27T17:00:00-04:00');
+          if (new Date() >= cutoff) {
+            document.getElementById('seminar-promo').style.display = 'none';
+          }
+        })();
+      </script>
     </div>
   </section>
 
